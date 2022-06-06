@@ -53,4 +53,5 @@ print('Inputs: ', inputs.keys())
 print('Outputs: ', outputs.keys())
 
 # Show new graph
-sliced_mod.graph.print_tabular()    # this print requires to install tabulate module - conda install tabulate
+sliced_mod.graph.print_tabular()    # This print requires to install tabulate module - conda install tabulate
+                                    # Can also print(sliced_mod.graph) without tabulate module
