@@ -44,9 +44,9 @@ tensorA, tensorB, tensorC =  torch.rand(20,20), torch.rand(20,20), torch.rand(20
 sliced_mod, inputs, outputs = slice_module(mod,(tensorA,tensorB,tensorC))
 
 # Usage with ONNX export
-torch.onnx.export(sliced_mod, 
-                  tuple(inputs.values()), 
-                  "sliced.onnx", 
-                  verbose=True, 
+torch.onnx.export(sliced_mod,               # new module
+                  tuple(inputs.values()),   # inputs to new module
+                  "sliced.onnx",                        
+                  verbose=True,                          
                   input_names=tuple(inputs.keys()), 
                   output_names=tuple(outputs.keys()))
